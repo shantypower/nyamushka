@@ -1,0 +1,67 @@
+.item-card {
+  &__wrapper {
+    padding: 4px;
+    border-radius: 12px;
+    background-image: linear-gradient(135deg, transparent 30px, #1698d9 30px);
+  }
+
+  &__title {
+    @include font-set(18px, 30px, normal, $grey, left);
+  }
+
+  &__brand {
+    @include font-set(48px, 60px, bold, $black, left);
+  }
+
+  &__sort {
+    @include font-set(24px, 30px, bold, $black, left);
+  }
+
+  &__quantity {
+
+  }
+
+  &__text {
+    @include font-set(14px, 16px, 400, $grey, left);
+  }
+
+  &__table {
+    border-radius: 8px;
+    background-image: linear-gradient(135deg, transparent 28px, #ffffff 30px);
+  }
+
+  &__row {
+    display: flex;
+    position: relative;
+  }
+
+  &__cell {
+    padding-left: 24px;
+  }
+
+  &__weight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: -100px;
+    right: 10px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    background-color: $blue;
+  }
+
+  &__volume {
+    @include font-set(42px, 42px, 400, $white, center);
+  }
+
+  &__unit {
+    @include font-set(21px, 22px, 400, $white, center);
+  }
+
+  &__description {
+    @include list-reset;
+    @include font-set(13px, 16px, 400, $white, left);
+  }
+}

@@ -1,0 +1,35 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  width: $mobile-width;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    box-sizing: border-box;
+    width: 720px;
+    padding: 0 80px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-width;
+  }
+
+  &__title {
+    margin: 0;
+    padding: 0;
+
+    @include font-set(36px, 50px, 100, $white, center);
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__list-item {
+    width: 320px;
+  }
+}
