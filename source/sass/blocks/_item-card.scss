@@ -1,20 +1,23 @@
 .item-card {
   &__wrapper {
     padding: 4px;
+    margin-bottom: 14px;
     border-radius: 12px;
     background-image: linear-gradient(135deg, transparent 30px, #1698d9 30px);
   }
 
   &__title {
-    @include font-set(18px, 30px, normal, $grey, left);
+    padding: 11px 0 0 43px;
+
+    @include font-set(16px, 30px, normal, $grey, left);
   }
 
   &__brand {
-    @include font-set(48px, 60px, bold, $black, left);
+    @include font-set(48px, 54px, bold, $black, left);
   }
 
   &__sort {
-    @include font-set(24px, 30px, bold, $black, left);
+    @include font-set(24px, 23px, bold, $black, left);
   }
 
   &__quantity {
@@ -22,32 +25,60 @@
   }
 
   &__text {
-    @include font-set(14px, 16px, 400, $grey, left);
+    @include font-set(14px, 15px, 400, $grey, left);
   }
 
   &__table {
     border-radius: 8px;
     background-image: linear-gradient(135deg, transparent 28px, #ffffff 30px);
+    border-collapse: collapse;
   }
 
   &__row {
     display: flex;
     position: relative;
+
+    &:nth-child(3) {
+      padding-top: 15px;
+    }
   }
 
   &__cell {
-    padding-left: 24px;
+    box-sizing: border-box;
+    padding-left: 44px;
+  }
+
+  &__measure {
+    padding-left: 5px;
+  }
+
+  &__image {
+    overflow: hidden;
+    padding: 0;
+    height: 284px;
+    border-radius: 8px;
+
+    img {
+      display: block;
+      position: relative;
+      top: 15px;
+      left: -28px;
+      max-width: 122%;
+      height: auto;
+    }
   }
 
   &__weight {
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
     position: absolute;
-    top: -100px;
-    right: 10px;
-    width: 80px;
-    height: 80px;
+    top: -92px;
+    right: 12px;
+    padding: 10px 0;
+    width: 79px;
+    height: 79px;
     border-radius: 50px;
     background-color: $blue;
   }
@@ -62,6 +93,24 @@
 
   &__description {
     @include list-reset;
-    @include font-set(13px, 16px, 400, $white, left);
+    @include font-set(13px, 16px, 400, $white, center);
+
+    &--disabled {
+      color: $yellow;
+      display: none;
+    }
+
+    &--selected {
+      display: none;
+    }
+  }
+
+  &__link {
+    color: $blue;
+
+    &--underline {
+      color: $blue;
+      border-bottom: 1px dashed $blue;
+    }
   }
 }
