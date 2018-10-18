@@ -9,11 +9,11 @@
   @media (min-width: $tablet-width) {
     box-sizing: border-box;
     width: 720px;
-    padding: 0 80px;
   }
 
   @media (min-width: $desktop-width) {
     width: $desktop-width;
+    padding: 0 80px;
   }
 
   &__title {
@@ -25,11 +25,29 @@
 
   &__list {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
+    @include list-reset;
+
+    @media (min-width: $tablet-width) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
 
   &__list-item {
+    box-sizing: border-box;
     width: 320px;
+
+    @media (min-width: $tablet-width) {
+      &:nth-child(2n) {
+        margin-left: 80px;
+
+        @media (min-width: $desktop-width) {
+          margin-right: 80px;
+        }
+      }
+    }
   }
 }
