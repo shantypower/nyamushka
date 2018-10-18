@@ -12,16 +12,13 @@
     @include font-set(16px, 30px, normal, $grey, left);
   }
 
-  &__brand {
-    @include font-set(48px, 54px, bold, $black, left);
-  }
-
   &__sort {
     @include font-set(24px, 23px, bold, $black, left);
   }
 
   &__quantity {
-
+    box-sizing: border-box;
+    padding-right: 5px;
   }
 
   &__text {
@@ -48,8 +45,9 @@
     padding-left: 44px;
   }
 
-  &__measure {
-    padding-left: 5px;
+  &__brand {
+    @include font-set(48px, 54px, bold, $black, left);
+    padding-left: 43px;
   }
 
   &__image {

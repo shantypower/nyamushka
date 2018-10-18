@@ -1,10 +1,6 @@
 .content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
   width: $mobile-width;
-  margin: 0 auto;
+  margin: auto;
 
   @media (min-width: $tablet-width) {
     box-sizing: border-box;
@@ -18,15 +14,19 @@
 
   &__title {
     margin: 0;
+    margin-bottom: 20px;
     padding: 0;
 
     @include font-set(36px, 50px, 100, $white, center);
+    font-family: "Exo 2.0", "Arial", sans-serif;
+    text-shadow: 0 1px $black;
   }
 
   &__list {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
     @include list-reset;
 
     @media (min-width: $tablet-width) {
@@ -39,6 +39,7 @@
   &__list-item {
     box-sizing: border-box;
     width: 320px;
+    margin-bottom: 50px;
 
     @media (min-width: $tablet-width) {
       &:nth-child(2n) {
