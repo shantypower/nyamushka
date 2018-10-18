@@ -95,11 +95,11 @@
 
     &--disabled {
       color: $yellow;
-      display: none;
+      display: block;
     }
 
     &--selected {
-      display: none;
+      display: block;
     }
   }
 
