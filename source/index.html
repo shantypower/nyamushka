@@ -12,10 +12,9 @@
 <body class="overlay">
   <main class="content">
     <h1 class="content__title">Ты сегодня покормил кота?</h1>
+    <ul class="content__list item-card">
+      <script id="template" type="text/x-handlebars-template">
 
-
-    <script id="template" type="text/x-handlebars-template">
-      <ul class="content__list item-card">
         {{#each card-item}}
       <li class="content__list-item">
         <div class="item-card__wrapper">
@@ -25,29 +24,29 @@
             </thead>
             <tbody>
               <tr class="item-card__row">
-                <td class="item-card__cell item-card__brand" colspan="2">Нямушка</td>
+                <td class="item-card__cell item-card__brand" colspan="2">{{brand}}</td>
               </tr>
               <tr class="item-card__row">
-                <td class="item-card__cell item-card__sort" colspan="2">с фуа-гра</td>
+                <td class="item-card__cell item-card__sort" colspan="2">{{sort}}</td>
               </tr>
               <tr class="item-card__row">
-                <td class="item-card__cell item-card__text item-card__quantity">10</td>
-                <td class="item-card__text item-card__measure">порций</td>
+                <td class="item-card__cell item-card__text item-card__quantity">{{mesure-quantity}}</td>
+                <td class="item-card__text item-card__measure">{{mesure}}</td>
               </tr>
               <tr class="item-card__row">
-                <td class="item-card__cell item-card__text item-card__quantity"></td>
-                <td class="item-card__text item-card__measure">мышь в подарок</td>
+                <td class="item-card__cell item-card__text item-card__quantity">{{bonus-quantity}}</td>
+                <td class="item-card__text item-card__measure">{{bonus}}</td>
               </tr>
               <tr class="item-card__row">
-                <td class="item-card__cell item-card__text item-card__review" colspan="2">заказчик доволен</td>
+                <td class="item-card__cell item-card__text item-card__review" colspan="2">{{review}}</td>
               </tr>
               <tr class="item-card__row">
-                <td class="item-card__image"><img src="/img/1372355406_kot_preview.png" width="370" height="361" alt="фото котика"></td>
+                <td class="item-card__image"><img src="/img/{{image}}" width="370" height="361" alt="фото котика"></td>
               </tr>
               <tr class="item-card__row">
                 <td class="item-card__weight ">
-                  <span class="item-card__volume">0,5</span>
-                  <span class="item-card__unit">кг</span>
+                  <span class="item-card__volume">{{volume}}</span>
+                  <span class="item-card__unit">{{unit}}</span>
                 </td>
               </tr>
             </tbody>
@@ -57,13 +56,14 @@
           <li class="item-card__description item-card__description--available">Чего сидишь? Порадуй котэ, <a href="#"
               class="item-card__link">
               <span class="item-card__link--underline">купи</span>.</a></li>
-          <li class="item-card__description item-card__description--selected">Печень утки разварная с артишоками.</li>
+          <li class="item-card__description item-card__description--selected">{{description}}</li>
           <li class="item-card__description item-card__description--disabled">Печалька, с курой закончился.</li>
         </ul>
       </li>
       {{/each}}
-    </ul>
+
     </script>
+    </ul>
 
   </main>
 
