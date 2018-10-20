@@ -1,0 +1,147 @@
+.item-card {
+  &__wrapper {
+    position: relative;
+    padding: 4px;
+    margin-bottom: 14px;
+    border-radius: 12px;
+    background-image: linear-gradient(135deg, transparent 30px, $blue 30px);
+
+    &--selected {
+      background-image: linear-gradient(135deg, transparent 30px, $red 30px);
+    }
+
+  }
+
+  &__title {
+    padding: 11px 0 0 43px;
+
+    @include font-set(16px, 30px, normal, $grey, left);
+  }
+
+  &__sort {
+    @include font-set(24px, 23px, bold, $black, left);
+  }
+
+  &__quantity {
+    box-sizing: border-box;
+    padding-right: 5px;
+  }
+
+  &__text {
+    @include font-set(14px, 15px, 400, $grey, left);
+  }
+
+  &__table {
+    border-radius: 8px;
+    background-image: linear-gradient(135deg, transparent 28px, #ffffff 30px);
+    border-collapse: collapse;
+  }
+
+  &__row {
+    display: flex;
+    position: relative;
+
+    &:nth-child(3) {
+      padding-top: 15px;
+    }
+  }
+
+  &__cell {
+    box-sizing: border-box;
+    padding-left: 44px;
+    min-height: 17px;
+  }
+
+  &__brand {
+    @include font-set(48px, 54px, bold, $black, left);
+    padding-left: 43px;
+  }
+
+  &__image {
+    overflow: hidden;
+    padding: 0;
+    height: 284px;
+    border-radius: 8px;
+
+    img {
+      display: block;
+      position: relative;
+      top: 15px;
+      left: -28px;
+      max-width: 122%;
+      height: auto;
+    }
+  }
+
+  &__weight {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: -92px;
+    right: 12px;
+    padding: 10px 0;
+    width: 79px;
+    height: 79px;
+    border-radius: 50px;
+    background-color: $blue;
+
+    &--selected {
+      background-color: $red;
+    }
+
+    &--disabled {
+      background-color: $grey;
+    }
+  }
+
+  &__volume {
+    @include font-set(42px, 42px, 400, $white, center);
+  }
+
+  &__unit {
+    @include font-set(21px, 22px, 400, $white, center);
+  }
+
+  &__description {
+    @include list-reset;
+    @include font-set(13px, 16px, 400, $white, center);
+
+    &--disabled {
+      color: $yellow;
+      display: block;
+    }
+
+    &--selected {
+      display: block;
+    }
+  }
+
+  &__link {
+    color: $blue;
+
+    &--underline {
+      color: $blue;
+      border-bottom: 1px dashed $blue;
+    }
+  }
+
+  &__checkbox:disabled + .item-card__wrapper {
+    background-image: linear-gradient(135deg, transparent 30px, $lightgrey 30px);
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      z-index: 1;
+      display: block;
+      width: 100%;
+      height: 480px;
+      background-image: linear-gradient(135deg, transparent 30px, $white 30px);
+      border-radius: 12px;
+      opacity: 0.6;
+    }
+  }
+}
