@@ -1,5 +1,6 @@
   var data = {
     "card-item": [{
+      "id": "foie-gra",
       "title": "Сказочное заморское яство",
       "brand": "Нямушка",
       "sort": "с фуа-гра",
@@ -13,6 +14,7 @@
       "unit": "кг",
       "description": "Печень утки разварная с артишоками."
     }, {
+      "id": "fish",
       "title": "Сказочное заморское яство",
       "brand": "Нямушка",
       "sort": "с рыбой",
@@ -27,6 +29,8 @@
       "description": "Головы щучьи с чесноком да свежайшая сёмгушка."
     },
     {
+      "id": "chiken",
+      "availability": "disabled",
       "title": "Сказочное заморское яство",
       "brand": "Нямушка",
       "sort": "с курой",
@@ -48,3 +52,42 @@
     $('.content__list').append( template(data) );
 
     });
+
+    //var product = document.querySelector(".item-card__wrapper");
+
+    var checkbox = document.querySelector(".item-card__checkbox");
+
+    var onProductClick = function(evt) {
+     var product = evt.currentTarget.parentNode;
+
+      if (!checkbox.hasAttribute("checked") && !checkbox.hasAttribute("disabled")) {
+        checkbox.setAttribute("checked", "checked");
+      } else {
+        checkbox.removeAttribute("checked");
+        product.classList.remove("item-card__wrapper--selected");
+      }
+    };
+
+    var onProductMouseLeave = function(evt) {
+     var product = evt.currentTarget.parentNode;
+
+      if (checkbox.checked && !product.classList.contains("item-card__wrapper--selected")) {
+        product.classList.add("item-card__wrapper--selected");
+      }
+    };
+
+    var onProductLinkClick = function(evt) {
+      var product = evt.currentTarget.parentNode.parentNode.parentNode;
+      product.classList.add("item-card__description--selected");
+      checkbox.setAttribute("checked", "checked");
+    };
+
+    var productsItems = document.querySelectorAll(".item-card__wrapper");
+    var buyLinks = document.querySelectorAll(".item-card__description--available");
+
+    for (var i = 0; i < productsItems.length; i++) {
+      productsItems[i].addEventListener("click", onProductClick);
+      productsItems[i].addEventListener("mouseleave", onProductMouseLeave);
+      buyLinks[i].addEventListener("click", onProductBuyLinkClick);
+    }
+

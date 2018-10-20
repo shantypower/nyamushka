@@ -17,6 +17,7 @@
 
         {{#each card-item}}
       <li class="content__list-item">
+        <input class="item-card__checkbox visually-hidden" type="checkbox" id="{{id}}" name="product" {{availability}}>
         <div class="item-card__wrapper">
           <table class="item-card__table">
             <thead>
@@ -44,7 +45,7 @@
                 <td class="item-card__image"><img src="/img/{{image}}" width="370" height="361" alt="фото котика"></td>
               </tr>
               <tr class="item-card__row">
-                <td class="item-card__weight ">
+                <td class="item-card__weight">
                   <span class="item-card__volume">{{volume}}</span>
                   <span class="item-card__unit">{{unit}}</span>
                 </td>
