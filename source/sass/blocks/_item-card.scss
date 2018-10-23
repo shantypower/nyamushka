@@ -6,10 +6,31 @@
     border-radius: 12px;
     background-image: linear-gradient(135deg, transparent 30px, $blue 30px);
 
+    &:hover {
+      cursor: pointer;
+    }
+
     &--selected {
       background-image: linear-gradient(135deg, transparent 30px, $red 30px);
     }
 
+    &--disabled {
+      background-image: linear-gradient(135deg, transparent 30px, $lightgrey 30px);
+
+      &::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        z-index: 1;
+        display: block;
+        width: 100%;
+        height: 480px;
+        background-image: linear-gradient(135deg, transparent 30px, $white 30px);
+        border-radius: 12px;
+        opacity: 0.6;
+      }
+    }
   }
 
   &__title {
@@ -32,6 +53,7 @@
   }
 
   &__table {
+    width: 100%;
     border-radius: 8px;
     background-image: linear-gradient(135deg, transparent 28px, #ffffff 30px);
     border-collapse: collapse;
@@ -104,17 +126,21 @@
     @include font-set(21px, 22px, 400, $white, center);
   }
 
-  &__description {
+  &__description-list {
+    padding-left: 0;
+  }
+
+  &__description-item {
     @include list-reset;
     @include font-set(13px, 16px, 400, $white, center);
 
     &--disabled {
       color: $yellow;
-      display: block;
+      display: none;
     }
 
     &--selected {
-      display: block;
+      display: none;
     }
   }
 
@@ -143,5 +169,25 @@
       border-radius: 12px;
       opacity: 0.6;
     }
+  }
+
+  &__checkbox:disabled ~ .item-card__description-list li:nth-child(3) {
+    display: block;
+  }
+
+  &__checkbox:disabled ~ .item-card__description-list li:nth-child(1) {
+    display: none;
+  }
+
+  &__checkbox:checked ~ .item-card__description-list li:nth-child(2) {
+    display: block;
+  }
+
+  &__checkbox:checked ~ .item-card__description-list li:nth-child(1) {
+    display: none;
+  }
+
+  &__checkbox:disabled + .item-card__wrapper:hover {
+    cursor: default;
   }
 }

@@ -35,8 +35,7 @@
                 <td class="item-card__text item-card__measure">{{mesure}}</td>
               </tr>
               <tr class="item-card__row">
-                <td class="item-card__cell item-card__text item-card__quantity">{{bonus-quantity}}</td>
-                <td class="item-card__text item-card__measure">{{bonus}}</td>
+                <td class="item-card__cell item-card__text item-card__measure" colspan="2">{{bonus}}</td>
               </tr>
               <tr class="item-card__row">
                 <td class="item-card__cell item-card__text item-card__review" colspan="2">{{review}}</td>
@@ -53,12 +52,12 @@
             </tbody>
           </table>
         </div>
-        <ul class="item-card__description">
-          <li class="item-card__description item-card__description--available">Чего сидишь? Порадуй котэ, <a href="#"
+        <ul class="item-card__description-list">
+          <li class="item-card__description-item item-card__description--available">Чего сидишь? Порадуй котэ, <a href="#"
               class="item-card__link">
               <span class="item-card__link--underline">купи</span>.</a></li>
-          <li class="item-card__description item-card__description--selected">{{description}}</li>
-          <li class="item-card__description item-card__description--disabled">Печалька, с курой закончился.</li>
+          <li class="item-card__description-item item-card__description-item--selected">{{description}}</li>
+          <li class="item-card__description-item item-card__description-item--disabled">Печалька, {{sort}} закончился.</li>
         </ul>
       </li>
       {{/each}}
