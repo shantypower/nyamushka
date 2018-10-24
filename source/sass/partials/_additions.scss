@@ -1,8 +1,9 @@
 body {
-  display: flex;
   position: fixed;
   top: 0;
   left: 0;
+
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-content: center;
@@ -10,10 +11,10 @@ body {
   width: 100%;
   height: 100%;
 
-  @include font-set(18px, 32px, 700, $black, left);
-
-  background: url("../img/Pattern.jpg") repeat;
+  background: url("../img/bg.jpg") repeat;
   background-color: $black;
+
+  @include font-set(18px, 32px, 700, $black, left);
 
   &::before {
     content: "";
@@ -21,9 +22,11 @@ body {
     top: 0;
     left: 0;
     z-index: -1;
+
     display: block;
     width: 100%;
     height: 100%;
+
     background-image: linear-gradient(to bottom, $black 0%, transparent 50%, $black 100%);
     opacity: 0.5;
   }
