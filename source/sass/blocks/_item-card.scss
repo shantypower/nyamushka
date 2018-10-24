@@ -1,10 +1,12 @@
 .item-card {
   &__wrapper {
     position: relative;
-    padding: 4px;
+
     margin-bottom: 14px;
-    border-radius: 12px;
+    padding: 4px;
+
     background-image: linear-gradient(135deg, transparent 30px, $blue 30px);
+    border-radius: 12px;
 
     &:hover {
       cursor: pointer;
@@ -18,14 +20,16 @@
       background-image: linear-gradient(135deg, transparent 30px, $lightgrey 30px);
 
       &::before {
-        position: absolute;
         content: "";
+        position: absolute;
         top: 0;
         left: 0;
         z-index: 1;
+
         display: block;
         width: 100%;
         height: 480px;
+
         background-image: linear-gradient(135deg, transparent 30px, $white 30px);
         border-radius: 12px;
         opacity: 0.6;
@@ -55,15 +59,21 @@
   &__table {
     display: block;
     width: 100%;
-    border-radius: 8px;
-    background-image: linear-gradient(135deg, transparent 28px, #ffffff 30px);
+
     border-collapse: collapse;
-    tbody { display: block}
+
+    background-image: linear-gradient(135deg, transparent 28px, #ffffff 30px);
+    border-radius: 8px;
+
+    tbody {
+      display: block;
+    }
   }
 
   &__row {
-    display: flex;
     position: relative;
+
+    display: flex;
 
     &:nth-child(3) {
       padding-top: 15px;
@@ -72,20 +82,22 @@
 
   &__cell {
     box-sizing: border-box;
-    padding-left: 44px;
     min-height: 17px;
+    padding-left: 44px;
   }
 
   &__brand {
-    @include font-set(48px, 54px, bold, $black, left);
     padding-left: 43px;
+
+    @include font-set(48px, 54px, bold, $black, left);
   }
 
   &__image {
     display: block;
-    overflow: hidden;
-    padding: 0;
     height: 284px;
+    padding: 0;
+    overflow: hidden;
+
     border-radius: 8px;
 
     img {
@@ -96,18 +108,20 @@
   }
 
   &__weight {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     position: absolute;
     top: -92px;
     right: 12px;
-    padding: 10px 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
     width: 79px;
     height: 79px;
-    border-radius: 50px;
+    padding: 10px 0;
+
     background-color: $blue;
+    border-radius: 50px;
 
     &--selected {
       background-color: $red;
@@ -135,8 +149,9 @@
     @include font-set(13px, 16px, 400, $white, center);
 
     &--disabled {
-      color: $yellow;
       display: none;
+
+      color: $yellow;
     }
 
     &--selected {
@@ -149,6 +164,7 @@
 
     &--underline {
       color: $blue;
+
       border-bottom: 1px dashed $blue;
     }
   }
@@ -157,14 +173,16 @@
     background-image: linear-gradient(135deg, transparent 30px, $lightgrey 30px);
 
     &::before {
-      position: absolute;
       content: "";
+      position: absolute;
       top: 0;
       left: 0;
       z-index: 1;
+
       display: block;
       width: 100%;
       min-height: 480px;
+
       background-image: linear-gradient(135deg, transparent 30px, $white 30px);
       border-radius: 12px;
       opacity: 0.6;

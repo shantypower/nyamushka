@@ -8,7 +8,7 @@ var data = {
     "mesure": "порций",
     "bonus": "мышь в подарок",
     "review": "",
-    "image": "1372355406_kot_preview.png",
+    "image": "cat.png",
     "volume": "0,5",
     "unit": "кг",
     "description": "Печень утки разварная с артишоками."
@@ -21,7 +21,7 @@ var data = {
     "mesure": "порций",
     "bonus": "2 мыши в подарок",
     "review": "",
-    "image": "1372355406_kot_preview.png",
+    "image": "cat.png",
     "volume": "2",
     "unit": "кг",
     "description": "Головы щучьи с чесноком да свежайшая сёмгушка."
@@ -36,19 +36,29 @@ var data = {
     "mesure": "порций",
     "bonus": "5 мышей в подарок",
     "review": "заказчик доволен",
-    "image": "1372355406_kot_preview.png",
+    "image": "cat.png",
     "volume": "5",
     "unit": "кг",
     "description": "Филе из цыплят с трюфелями в бульоне."
   }]
 };
 
+
 $(document).ready(function () {
+
+  // NodeList.prototype.forEach polyfill for IE
+  if (window.NodeList && !NodeList.prototype.forEach) {
+    NodeList.prototype.forEach = function (callback, thisArg) {
+      thisArg = thisArg || window;
+      for (var i = 0; i < this.length; i++) {
+        callback.call(thisArg, this[i], i, this);
+      }
+    };
+  }
 
   var template = Handlebars.compile($('#template').html());
   $('.content__list').append(template(data));
 
-  /////*************************************************** */
 
   var onProductClick = function (event) {
     var product = event.currentTarget;
@@ -97,18 +107,18 @@ $(document).ready(function () {
   }
 
   var eventInit = function () {
-
     var productItems = document.querySelectorAll('.item-card__wrapper');
     var buyLinks = document.querySelectorAll('.item-card__link--underline');
+    productItems.forEach(function (item) {
+      item.addEventListener("click", onProductClick);
+      item.addEventListener("mouseenter", onProductMouseEnter);
+      item.addEventListener("mouseleave", onProductMouseLeave);
+    })
 
-    for (var i = 0; i < productItems.length; i++) {
-      productItems[i].addEventListener("click", onProductClick);
-      productItems[i].addEventListener("mouseenter", onProductMouseEnter);
-      productItems[i].addEventListener("mouseleave", onProductMouseLeave);
-      buyLinks[i].addEventListener("click", onBuyLinkClick);
-    }
+    buyLinks.forEach(function (link) {
+      link.addEventListener("click", onBuyLinkClick);
+    })
   }
 
   eventInit();
-
 });

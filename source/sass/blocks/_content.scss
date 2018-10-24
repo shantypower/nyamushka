@@ -16,9 +16,10 @@
     margin-bottom: 20px;
     padding: 0;
 
-    @include font-set(36px, 50px, 100, $white, center);
     font-family: "Exo 2.0", "Arial", sans-serif;
     text-shadow: 0 1px $black;
+
+    @include font-set(36px, 50px, 100, $white, center);
   }
 
   &__list {
