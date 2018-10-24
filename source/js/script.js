@@ -48,7 +48,6 @@ $(document).ready(function () {
   var template = Handlebars.compile($('#template').html());
   $('.content__list').append(template(data));
 
-  /////*************************************************** */
 
   var onProductClick = function (event) {
     var product = event.currentTarget;
@@ -97,16 +96,17 @@ $(document).ready(function () {
   }
 
   var eventInit = function () {
-
     var productItems = document.querySelectorAll('.item-card__wrapper');
     var buyLinks = document.querySelectorAll('.item-card__link--underline');
+    productItems.forEach(function(item) {
+      item.addEventListener("click", onProductClick);
+      item.addEventListener("mouseenter", onProductMouseEnter);
+      item.addEventListener("mouseleave", onProductMouseLeave);
+    })
 
-    for (var i = 0; i < productItems.length; i++) {
-      productItems[i].addEventListener("click", onProductClick);
-      productItems[i].addEventListener("mouseenter", onProductMouseEnter);
-      productItems[i].addEventListener("mouseleave", onProductMouseLeave);
-      buyLinks[i].addEventListener("click", onBuyLinkClick);
-    }
+    buyLinks.forEach(function(link) {
+      link.addEventListener("click", onBuyLinkClick);
+    })
   }
 
   eventInit();
