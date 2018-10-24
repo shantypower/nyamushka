@@ -1,6 +1,5 @@
 .content {
   width: $mobile-width;
-  margin: auto;
 
   @media (min-width: $tablet-width) {
     box-sizing: border-box;
@@ -39,6 +38,7 @@
   &__list-item {
     box-sizing: border-box;
     width: 320px;
+    min-height: 480px;
     margin-bottom: 50px;
 
     @media (min-width: $tablet-width) {
