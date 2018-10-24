@@ -62,17 +62,17 @@
 
 ### Q7 Какие ресурсы вы используете для развития в профессиональной сфере? Приведите несколько конкретных примеров (сайты, блоги и так далее).
 
-- *[habr.com](https://habr.com/)
-- *[webdesign-master.ru](https://webdesign-master.ru/)
+- *[habr.com](https://habr.com/)*
+- *[webdesign-master.ru](https://webdesign-master.ru/)*
 - *[css-tricks.ru](http://www.css-tricks.ru/)
-- *[developer.mozilla.org](https://developer.mozilla.org/ru/)
-- *[javascript.ru](http://javascript.ru/)
-- *[true-coder.ru](https://true-coder.ru/)
-- *[proglib.io](https://proglib.io/)
-- *[webref.ru](https://webref.ru/)
+- *[developer.mozilla.org](https://developer.mozilla.org/ru/)*
+- *[javascript.ru](http://javascript.ru/)*
+- *[true-coder.ru](https://true-coder.ru/)*
+- *[proglib.io](https://proglib.io/)*
+- *[webref.ru](https://webref.ru/)*
 
-- *[htmlacademy.ru/blog]( https://htmlacademy.ru/blog/tags/%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D1%81%D1%81%D1%8B%D0%BB%D0%BA%D0%B0)
-* [htmlacademy.ru/blog/tags](https://htmlacademy.ru/blog/tags/%D1%81%D1%82%D0%B0%D1%82%D1%8C%D0%B8)
+- *[htmlacademy.ru/blog]( https://htmlacademy.ru/blog/tags/%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D1%81%D1%81%D1%8B%D0%BB%D0%BA%D0%B0)*
+- *[htmlacademy.ru/blog/tags](https://htmlacademy.ru/blog/tags/%D1%81%D1%82%D0%B0%D1%82%D1%8C%D0%B8)*
 
  
 Какое направление развития вам более близко: JS-программирование, HTML/CSSверстка или и то, и другое?
@@ -88,3 +88,12 @@
 Я - выпускник физико-математического факультета педуниверситета (математика и информатика). Но работать в школе не захотелось. Хотела быть программистом, но тогда не было денег на обучение. Пошла работать в торговлю. Прошла путь от продавца до директора магазина. Но чувствуя, что все это не моё, вернулась на путь программирования и разработки. Душа сразу порадовалась )))
 Но пока проблема: зеленые новички почти никому не нужны. Хочется учиться прямо "в цеху", нарабатывать опыт, прокачивать скилл...
 Желание, интерес есть огромные.
+
+Самостоятельная работа:
+
+
+Учебные: 
+ * https://shantypower.github.io/pink2/
+ * https://shantypower.github.io/gllacy/
+ * https://shantypower.github.io/keksobooking/
+
