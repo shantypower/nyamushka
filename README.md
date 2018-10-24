@@ -64,7 +64,7 @@
 
 - *[habr.com](https://habr.com/)*
 - *[webdesign-master.ru](https://webdesign-master.ru/)*
-- *[css-tricks.ru](http://www.css-tricks.ru/)
+- *[css-tricks.ru](http://www.css-tricks.ru/)*
 - *[developer.mozilla.org](https://developer.mozilla.org/ru/)*
 - *[javascript.ru](http://javascript.ru/)*
 - *[true-coder.ru](https://true-coder.ru/)*
